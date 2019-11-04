@@ -1,92 +1,147 @@
-## Python Project Night - Learn something new every month
+For this project, we will be creating a functioning REST API. REST APIs can help distribute useful information via GET requests, as well as post and alter databases in a user friendly fashion. An example project will be uploaded after the completion of the Project Night.
 
-Welcome to the Python Projects Night organized by Chicago Python User Group or ChiPy. 
-Here you will find python challenges that we solve together as a groups every third 
-Thursday of the month at 6:30 pm at Braintree's Chicago Office. This repository has the
-collection of the Challenge problems that we solve at Project Nights.  
+### The project
+This project will revolve around Django and Django's rest framework. The goal of which is to create a working REST API. If you feel more comfortable with flask, feel free to trail off the beaten path to create one! Before starting, make sure to look over the requirements file and install any necessary packages. To avoid bloating of your primary working environment, you might find it useful to create a virtual environment. The requirements.txt file will have the working package versions at the time of creation.
 
-[Talk to us on Slack](https://chipy.slack.com/messages/C4SRS5G3B/details/)
+### Is this project for you
+Before you progress further, let's check if we are ready to solve this. You should
+- Have a personal computer with working wifi and power cord
+- Have Python 3.7 installed on your computer.
+- Have [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com/3) installed in your computer.
+- Have written & ran programs in Python from the command line
+- Have some idea about lists, dictionaries and functions
+- Have created a virtual environment and installing packages with `pip`
 
-## Code of Conduct
-[Here](http://www.chipy.org/pages/conduct/) is our code of conduct.
-
-
-## Contributors
-Thanks to those who come down Python Project Night every month. Here is the list of folks who have
-spent their time in bringing this repository to you.
-
-* [Nik](https://github.com/sharma7n)
-* [Hector Rios](https://github.com/hectron)
-* [Tathagata](https://github.com/tathagata)
-
-## Challenge Problems
-Challenge problems are fun, hands-on coding exercises covering a variety of topics -- such as pure problem solving, web development, and data science. The participants of Project Night are assigned to teams of four, and then solve the problem together in an hour. Teams are designed to have diverse experience levels, giving team members equal opportunity to learn and share ideas.
+### What is not supported
+This project is not tested using Jupyter Notebook, PyCharm,
+Spider, or any other ide/text editor/programming environment.
 
 
-### What you need
-* Wi-fi powered laptop, power chord
-* Python: 3.5 (We can not guarantee help if you are using Python 2.7)
-* Text editor: Atom, Sublime Text, Visual Studio Code
-* OS: GNU/Linux. OS X, Windows
+### Django
+Django is a full web framework capable of handling both back and front end portions of a web app. The Django team has created great resources to make setting up a Django app quick and easy. It is highly recommended to use the Django polls tutorial to help you through this challenge (https://docs.djangoproject.com/en/2.2/intro/tutorial01/). This would be a great use of your second computer! The second portion utilizes the Djano Rest framework in the installed apps portion of your settings.py file.  
 
+### Setup your environment
+For this portion of the project, it might help to use someone's computer that already has the projects prerequisites installed. Environments can be tricky especially when dealing with multiple versions of the same packages. Whether you are working with someone else environmental manager or your own, here is what you will need.    
 
-## Previous Projects
-Here is a list of projects we have solved previosuly. These are great exercises
-if you are planning to get level up your skills. Try them out and if you need any
-help [ask us on slack](https://chipy.slack.com/messages/C4SRS5G3B/details/) 
+- A package manager such as pip. While pip is the standard that comes with downloaded Python versions, make sure that you at least have some sort of installation manager. A link to the pip documentation can be seen below.
 
-### Python101
-#### Python Koans
-For this exercise we will learn the Zen of Python using Test Driven Development.
-Python Koans is a suite of broken tests, which are written against Python code that 
-demonstrate how to write idiomatic python.
-Your job is to fix the broken tests by filling in the missing parts of the code.
+		https://pip.pypa.io/en/stable/installing/
 
-[Solve it!](problems/py101/python_koans)
+- As mentioned previously, virtual environments can be very useful in keeping your main environments light. A large problem with not using virtual environments is the use of conflicting versions of individual packages. By using a virtual environment you can guarantee a stable platform that has been vetted for this particular challenge. Documentation for creating a virtual environment, using pip, can be seen below.
 
+    https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 
-#### Python Team Projects
-The organizers of Project Nights need your help! Grouping attendees for Project Night team project is a manual task. Why do it manually, when we can automate it? We open up the problem to you.
+- The minimum required packages as stated in the requirements.txt file. Feel free to add useful packages, such as Beautiful Soup, Requests, ect., if you are creating your own databases. This can be done by running the following command in the projects Roote directory.
 
-[Solve it!](problems/py101/python_team_project)
+    pip install -r requirements.txt
 
+- After stepping into your newly created environment, running the command below will list your
 
-#### Pytest Team Projects
-This is an introduction to testing using pytest that uses the same problem as above of grouping project night attendees into teams of 4.
+  pip list
 
-[Solve it!](problems/py101/testing)
+### Create a Django app
+- Enter the directory you wish to create your Django app. Starting your app can be as simple as running a single command. The folks at Django has already created the architecture you will be using for your future Webapp. Follow the tutorial instructions in the Django documentation (lised below) up until the Creating the Polls app section.
 
+  https://docs.djangoproject.com/en/2.2/intro/tutorial01/
 
-### WebDev
-#### Flask Team Projects
-Build a web app for to group the Python project night  attendees.
+- If you see the congratulations page on your local port http://127.0.0.1:8000/, you will know you installed things correctly.
 
-[Solve it!](problems/webdev/flask_team_project)
+### Create Your First App
 
+- In the Django tutorial, follow the instructions to run the startapp script in the Creating the Polls App section. Please don't call your app Polls or advance further in the Django tutorial. If done correctly, you should see the addition of your app directory inside your project. Take a second to thumb through the newly created .py files, as we will be using them later.
 
-#### Flask Collage
-Build a small web app using Flask which accepts the meetup.com event id for tonight
-as a parameter and would fetch the profile pictures of all the attendees to create a
-collage.
+  https://docs.djangoproject.com/en/2.2/intro/tutorial01/
 
-[Solve it!](problems/webdev/flask_collage)
+- In order for Django to recognize your created app, you must first register it in your settings.py file. This can be found in the documentation below. In depth documentation on how to configure and install your app can be seen in the "Projects and applications" and "For application users" section in the documentation.
 
+	https://docs.djangoproject.com/en/2.2/ref/applications/
 
-### Data Science
+### Find a Database
+- Before advancing, find a database (you can also make your own!) that you wish to use for your REST api. It helps if the data is something you are interested in. Kaggle is a great resource to find databases publicly available. If you are looking for something specific, Google has a stellar database search feature.
 
-#### Data Analysis With Pandas
-Pandas is the defacto package for data analysis in Python. In this project, we are going to use the basics of pandas to analyze the interests of project Night's attendees. What can we learn about the Python Project Night's attendees by mining their meetup.com
-profile data?
+  https://www.kaggle.com/datasets
 
-[Solve it!](problems/data_science/Analysis-Workshop.ipynb)
+  https://toolbox.google.com/datasetsearch
 
+- The database you just created will eventually replace the db.sqlite3 file in your projects directory. Make sure you update the NAME parameter in the DATABASES section of your settings.py file. The startproject script creates your app preconfigured to handle a SQLite database. To run PostgreSQL, or any other of the pre-approved database options, refer to the documentation below.
 
-#### Diversif.ai
-Diversity in tech communities has been a widely addressed topic. As one of the most active tech community in the world, in this exercise we would try to measure some aspects of diversity in tech community. We will use image recognition on the meetup.com profile pictures of the members of ChiPy user group and determine determine how diverse our attendees are. Then we will compare the same with other tech groups in the city and around the world.
+  https://docs.djangoproject.com/en/2.2/ref/databases/
 
-[Solve it!](problems/data_science/diversif.ai.ipynb)
+### Create Models
+- Once your database has been stored and your settings.py file is updated, migrate your table using the command below.
 
-#### Introduction to Text Analysis with sklearn
-This is a gentle introduction to text analysis with sklearn. We build a recommnedation system that predicts
-Pycon conference talks based on previous history of Pycon talks. 
+	python manage.py migrate
 
+- In your models.py file, located in your app folder, you will update class fields for each of your database tables. Django makes you explicitly characterize your database into classes (tables) and class fields (features) for each feature in your created database. There is a way for Django to "guess" and do this for you automatically. However, for the sake of this project we will avoid using it. The link to creating a model can be seen below, in the Django documentation, in the Models section. Don't worry about activating the model for now. Similarly, the documentation on how to appropriately designate character fields is listed second. If you really want to get fancy, try making your tables into a relational database by linking your fields together. The documentation to do this is in the third link under the Relationships section.
+
+	https://docs.djangoproject.com/en/2.2/intro/tutorial02/
+
+ 	https://docs.djangoproject.com/en/2.2/ref/models/fields/
+
+	https://docs.djangoproject.com/en/2.2/topics/db/models/#automatic-primary-key-fields
+
+- Once your models have been constructed run the makemigrations command. Then commit them with the migrate command.
+
+	python manage.py makemigrations [APP NAME]
+
+	python manage.py migrate
+
+### Installing the REST framework
+- Install django REST framework using pip install. Note: if you used the requiremnts.txt django REST framework has already been installed for you.
+
+	pip install djangorestframework
+
+- With the rest framework installed, you will need to update your settings.py INSTALLED_APPS section and main project URLS. Django REST framework's documentation outlines this well in the Installation section. When designating a file path for your API, try to be strategic on how your user will interact with it. Aka you would not want it to be the main page or the root file path. An example of an appropriate path has been illustrated below.  
+
+	https://www.django-rest-framework.org/#installation
+
+	path("[AppName]/", include("[appName].urls")),
+
+### Serialization
+- Before creating a url or view for our REST framework, we must first serialize our data. This allows Django to render our data into a json format. To do this create a serializers.py file in your app directory and follow the ModelSerializer section in the Django REST documentation. Make sure you designate the table (model) and fields (features) you wish to include in your REST API.
+
+	https://www.django-rest-framework.org/api-guide/serializers/#modelserializer
+
+- If you do not want users to have the ability to alter your models, make sure to designate read_only_fields. This is documented in the Specifying read only fields section.
+
+	https://www.django-rest-framework.org/api-guide/serializers/#specifying-read-only-fields
+
+### Create a View
+- Django REST framework already has built in views to interact with your API. This can be in either pure json or an actual interactive page. The views.py file is how you indicate to your app what you want to display in the browser. An example of the class based views is in the Django REST framework tutorial. Keep in mind that the django.contrib.auth.models and tutorial.quickstart.serializers are simply your models and serializers. Instead they can be expressed as shown below. The brackets are simply place holders for the descriptions inside of them.
+
+	https://www.django-rest-framework.org/tutorial/quickstart/#views
+
+	from .models import [Class Model 1], [Class Model 2], [ect.]
+	from .serializers import [Class Serializer 1], [Class Serializer 2], [ect.]
+
+- We can also make our framework queryable by augmenting our queryset. To do this lets make a get_queryset function that will augment the queryset variable. Under your View class pass the following function.
+
+	def get_queryset(self):
+		queryset = [Class Model 1].objects.all()
+
+		[feature] = self.request.query_params.get(["[feature]", None])
+		### repeat this for as many features you want queryable
+
+		if [feature] is not None:
+			queryset = queryset.filter([feature] = [feature])
+
+		### repeat this for the remaining features
+
+		return queryset
+
+### Designating a URL
+- Finally the url pages will designate where in the browser your pages can be found. It is important to note that there will be two urls.py pages. The first is imbedded in your second project folder (where your settings.py file should be). In this file there will already be some code written. We will simply add our path under the admin pathway. This code registers the app urls to be recognized by the Django project.
+
+	urlpatterns = [
+			path("", include("[App Folder].urls")),
+			path('admin/', admin.site.urls),
+	]
+
+- The second urls.py file is located in your app directory. This handles the urls for the localized app. The documentation in Django REST frameworks illustrates how to create a default routing scheme.
+
+	https://www.django-rest-framework.org/tutorial/quickstart/#urls
+
+### Running your Server
+- At this point it is time to test your API. This can be accomplished by the manage.py runserver command. The default location for your project is localhost:8000/. From there follow the naming scheme you created in your urls. Feel free to play with your API by using those filterable features you created.
+
+ 	python manage.py runserver
