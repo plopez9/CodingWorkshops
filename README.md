@@ -17,7 +17,6 @@ This project is not tested using Jupyter Notebook, PyCharm,
 Spider, or any other ide/text editor/programming environment.
 
 ### Useful Weblinks
-The weblinks below can aid you as you work your way through this challenge.
 
 - Virtual Environments & Installation
 
