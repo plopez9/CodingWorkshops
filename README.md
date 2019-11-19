@@ -20,31 +20,45 @@ Spider, or any other ide/text editor/programming environment.
 The weblinks below can aid you as you work your way through this challenge.
 
 - Virtual Environments & Installation
+
 	https://pip.pypa.io/en/stable/installing/
+
 	https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 
 - Database Resources
+
 	https://www.kaggle.com/datasets
+
 	https://toolbox.google.com/datasetsearch
+
 	https://docs.djangoproject.com/en/2.2/ref/databases/
 
 - Django Startup and Features
+
 	https://docs.djangoproject.com/en/2.2/intro/tutorial01/
+
 	https://docs.djangoproject.com/en/2.2/ref/applications/
 
 - Django Models
+
 	https://docs.djangoproject.com/en/2.2/ref/models/fields/
+
 	https://docs.djangoproject.com/en/2.2/topics/db/models/#automatic-primary-key-fields
 
 - Django REST Framework
+
 	https://www.django-rest-framework.org/#installation
 
 - Serialization
+
 	https://www.django-rest-framework.org/api-guide/serializers/#modelserializer
+
 	https://www.django-rest-framework.org/api-guide/serializers/#specifying-read-only-fields
 
 - Views and URLS
+
 	https://www.django-rest-framework.org/tutorial/quickstart/#views
+
 	https://www.django-rest-framework.org/tutorial/quickstart/#urls
 
 ### Django
