@@ -1,4 +1,3 @@
-###Intro
 For this project, we will be creating a functioning REST API. REST APIs can help distribute useful information via GET requests, as well as post and alter databases in a user friendly fashion. An example project will be uploaded after the completion of the Project Night.
 
 ### The project
